@@ -250,3 +250,28 @@ var store4 = {
         'sold on': ['2015-01-06', '2015-01-06', '2015-01-07', '2015-01-10']
       }
 }
+//value 4.63 from store1
+console.log(store1['2015-01-08'][0][1]);
+
+//cost of 'Dark Chocolate Crunchies' from store4
+console.log(store4['Dark Chocolate Crunchies'].cost);
+
+//print the sale dates of banana bunches for store2
+console.log(store2['sale dates']['Banana Bunches']);
+
+//Built in array property to find how many sale dates
+console.log(store2['sale dates']['Banana Bunches'].length);
+
+//Same property to count # of Berry Bites sold by store4
+console.log(store4['Berry Bites']['sold on'].length);
+
+//Create a variable to store the name of a candy, and then use it
+//to access the sale dates for store2
+var candy = 'Mint Wafers';
+console.log(store2['sale dates'][candy]);
+
+//Change the candy value to change the output
+candy = 'Peppermint Poppers';
+console.log(store2['sale dates'][candy]);
+
+
