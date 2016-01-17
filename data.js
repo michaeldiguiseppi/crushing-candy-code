@@ -507,19 +507,28 @@ function myFn2 () {
   var store = store3;
   for (var i = 0; i < store.length; i++) {
     var storeObjects = Object.keys(store[i]);
-    var innerObjects = storeObjects[0];
-    console.log(innerObjects['date']);
-    // for (var j = 0; j < storeObjects.length; j++) {
-    //   var innerObjects = storeObjects['date'];
-    //   console.log(innerObjects);
-    // }
   };
-}
+};
 
-myFn2();
+//myFn2();
 //  - Using the same technique, iterate over store2's sale dates data. Which day had the most total number of sales? How did you calculate this?
+function myFn3 () {
+  var store = store2;
+  var counter = {};
+  var saleDates = store['sale dates'];
+  for (var key in saleDates) {
+    for (var i = 0; i < saleDates[key].length; i++) {
+      if ( !counter[saleDates[key]] ) {
+        counter = saleDates[key][i];
+      } else {
+        counter += saleDates[key][i];
+      };
+    };
+  };
+  console.log(counter);
+};
 
-
+myFn3();
 
 // #### After doing all of the above, see if you can do the following tasks:
 //  - Create an array of the candies sold by store1 on January 10th.
